@@ -1,0 +1,93 @@
+[
+    {
+      "title": "Understanding JavaScript Closures",
+      "content": "Closures are an important concept in JavaScript that allows a function to access variables from an outer function scope.",
+      "category": "JavaScript",
+      "author": "John Doe",
+      "image": "https://example.com/js-closures.png",
+      "createdAt": "2023-10-01T12:00:00.000Z",
+      "updatedAt": "2023-10-01T12:00:00.000Z"
+    },
+    {
+      "title": "Introduction to React Hooks",
+      "content": "React hooks enable function components to use state and other React features without writing classes.",
+      "category": "React",
+      "author": "Jane Smith",
+      "image": "https://example.com/react-hooks.png",
+      "createdAt": "2023-10-02T09:30:00.000Z",
+      "updatedAt": "2023-10-02T09:30:00.000Z"
+    },
+    {
+      "title": "Building RESTful APIs with Node.js",
+      "content": "This guide covers the process of building RESTful APIs using Node.js and Express.",
+      "category": "Node.js",
+      "author": "Alice Johnson",
+      "image": "https://example.com/node-api.png",
+      "createdAt": "2023-10-03T15:45:00.000Z",
+      "updatedAt": "2023-10-03T15:45:00.000Z"
+    },
+    {
+      "title": "An Overview of MongoDB Aggregation",
+      "content": "MongoDB's aggregation framework is a powerful tool for processing and transforming data in the database.",
+      "category": "MongoDB",
+      "author": "Bob Lee",
+      "image": "https://example.com/mongodb-aggregation.png",
+      "createdAt": "2023-10-04T11:20:00.000Z",
+      "updatedAt": "2023-10-04T11:20:00.000Z"
+    },
+    {
+      "title": "Async/Await in JavaScript",
+      "content": "Async/Await allows you to write asynchronous code in a synchronous manner, improving readability and maintainability.",
+      "category": "JavaScript",
+      "author": "Chris Brown",
+      "image": "https://example.com/js-async-await.png",
+      "createdAt": "2023-10-05T14:00:00.000Z",
+      "updatedAt": "2023-10-05T14:00:00.000Z"
+    },
+    {
+      "title": "CSS Grid Layout: A Beginner's Guide",
+      "content": "CSS Grid Layout is a two-dimensional layout system that allows you to create responsive web designs with ease.",
+      "category": "CSS",
+      "author": "Dana White",
+      "image": "https://example.com/css-grid.png",
+      "createdAt": "2023-10-06T08:15:00.000Z",
+      "updatedAt": "2023-10-06T08:15:00.000Z"
+    },
+    {
+      "title": "Deploying Applications with Docker",
+      "content": "Docker enables developers to package applications into containers, making them easier to deploy and manage.",
+      "category": "DevOps",
+      "author": "Edward King",
+      "image": "https://example.com/docker-deploy.png",
+      "createdAt": "2023-10-07T16:30:00.000Z",
+      "updatedAt": "2023-10-07T16:30:00.000Z"
+    },
+    {
+      "title": "GraphQL vs REST: Key Differences",
+      "content": "This post explores the differences between GraphQL and REST, two popular API architectures.",
+      "category": "APIs",
+      "author": "Fiona Green",
+      "image": "https://example.com/graphql-vs-rest.png",
+      "createdAt": "2023-10-08T10:00:00.000Z",
+      "updatedAt": "2023-10-08T10:00:00.000Z"
+    },
+    {
+      "title": "Understanding Python Generators",
+      "content": "Generators are a special type of Python function that return an iterator, allowing you to iterate over a sequence of values.",
+      "category": "Python",
+      "author": "George Harris",
+      "image": "https://example.com/python-generators.png",
+      "createdAt": "2023-10-09T13:45:00.000Z",
+      "updatedAt": "2023-10-09T13:45:00.000Z"
+    },
+    {
+      "title": "Mastering Git and GitHub",
+      "content": "Git and GitHub are essential tools for modern development, allowing teams to collaborate efficiently on code.",
+      "category": "Version Control",
+      "author": "Hannah Lee",
+      "image": "https://example.com/git-github.png",
+      "createdAt": "2023-10-10T18:25:00.000Z",
+      "updatedAt": "2023-10-10T18:25:00.000Z"
+    }
+  ]
+  

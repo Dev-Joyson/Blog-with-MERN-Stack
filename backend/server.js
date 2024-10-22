@@ -1,12 +1,16 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const postRoutes = require('./routes/posts')
+const cors = require('cors')
 
 const app = express()
 const PORT = process.env.PORT || 8000
 
 //Middlewares
 app.use(bodyParser.json())
+app.use(cors())
+
 
 //Connect to MongoDB
 const connectToDB = async () => {
@@ -20,6 +24,9 @@ const connectToDB = async () => {
   };
 
 connectToDB();
+
+// use routes
+app.use('/api/posts', postRoutes);
 
 //Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

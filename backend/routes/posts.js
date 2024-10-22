@@ -42,3 +42,46 @@ router.post('/', async(req,res) => {
         res.status(400).json({message: error.message})
     }
 })
+
+//Updating a post
+router.put('/:id', async(req, res) => {
+    try {
+        const post = await Post.findById(req.params.id)
+        if(!post) {
+            return res.status(404).json({
+                message: "Post not found"
+            })
+        }
+
+        post.title = req.body.title || post.title
+        post.content = req.body.content || post.content
+        post.category = req.body.category || post.category
+        post.author = req.body.author || post.author
+        post.image = req.body.image || post.image
+        post.updatedAt = Date.now()
+
+        const updatedPost = await post.save()
+        res.json(updatedPost)
+        
+    } catch (error) {
+        res.status(404).json({message: error.message})
+    }
+})
+
+//Delete a post
+router.delete('/:id', async (req, res) => {
+    try {
+        const post = await Post.findById(req.params.id)
+        if(!post) {
+            return res.status(404).json({message : "Post not found"})
+        }
+
+        // await Post.deleteOne({_id: post._id})
+        await Post.findByIdAndDelete(post._id)
+        res.json({messsage : "Post deleted"})
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
+module.exports = router
