@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
-const Post = () => {
+const Post = ({post}) => {
     return (
         <div class="card mb-4">
             <div class="row">
@@ -12,13 +13,13 @@ const Post = () => {
                     />
                 </div>
                 <div class="card-body col-md-8">
-                    <h5 class="card-title">Post Title 1</h5>
+                    <h5 class="card-title">{post.title}</h5>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        {post.content.substr(0, 70)}...
                     </p>
-                    <a href="#" class="btn btn-primary">
+                    <Link to={`/posts/${post._id}`} class="btn btn-primary">
                         Read More
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

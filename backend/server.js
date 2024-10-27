@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const postRoutes = require('./routes/posts')
+const categoryRoutes = require('./routes/categories')
 const cors = require('cors')
 
 const app = express()
@@ -27,6 +28,7 @@ connectToDB();
 
 // use routes
 app.use('/api/posts', postRoutes);
+app.use('/api/categories', categoryRoutes);
 
 //Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
