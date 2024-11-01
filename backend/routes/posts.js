@@ -97,7 +97,7 @@ router.get('/category/:categoryId', async(req,res) => {
         }
 
         //Fetch posts
-        const posts = await Post.find({category: categoryId})
+        const posts = await Post.find({category: categoryId}).populate('category')
         res.status(200).json(posts)
 
     } catch (error) {

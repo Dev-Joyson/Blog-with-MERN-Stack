@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Post from '../Components/Post'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const PostList = () => {
 
 	const [posts, setPosts] = useState([])
+	const [category, setCategoris] = useState([])
+
+	const fetchCategory = async() => {
+		const response = await axios.get('http://localhost:8000/api/categories')
+		setCategoris(response.data)
+	}
 
 
 	useEffect(() => {
@@ -16,6 +23,7 @@ const PostList = () => {
 		}
 
 		fetchPosts();
+		fetchCategory();
 	}, [])
 
 	return (
@@ -46,9 +54,7 @@ const PostList = () => {
 								<div className="card-body">
 									<h5 className="card-title">Categories</h5>
 									<ul className="list-group">
-										<li className="list-group-item"><a href="#" className="text-black">Category 1</a></li>
-										<li className="list-group-item"><a href="#" className="text-black">Category 2</a></li>
-										<li className="list-group-item"><a href="#" className="text-black">Category 3</a></li>
+										{category.map((item) => <li className="list-group-item"><Link to={`/posts/category/${item._id}`} className="text-black">{item.name}</Link></li>)}
 									</ul>
 								</div>
 							</div>
